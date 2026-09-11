@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Effective Communication & Public Speaking registration form for Star Language Arts." />
+  <title>Effective Communication & Public Speaking — Registration</title>
+
+  <!-- Brand-friendly typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="CSS/form.css" />
+  <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="registration-card" aria-labelledby="formTitle">
+      <div class="brand-mark" aria-hidden="true">
+        <span class="brand-dot"></span>
+        <span class="brand-star">★</span>
+      </div>
+
+      <header class="form-header">
+        <p class="eyebrow">
+          <a href="https://www.starlanguagearts.com/" target="_blank" rel="noopener noreferrer">
+            STAR LANGUAGE ARTS LTD
+          </a>
+        </p>
+        <h1 id="formTitle">Effective Communication &amp; Public Speaking</h1>
+        <p class="intro">
+          Ready to communicate with more clarity, confidence and purpose?
+          Join us for five Saturdays in October for practical classes,
+          available physically or virtually.
+        </p>
+      </header>
+
+      <!-- Progress -->
+      <div class="progress-wrap" aria-label="Registration progress">
+        <div class="progress-line" aria-hidden="true">
+          <span id="progressFill"></span>
+        </div>
+
+        <div class="progress-steps">
+          <button type="button" class="progress-step active" data-step-indicator="1" aria-label="Step 1: Personal information">
+            <span>1</span>
+            <small>Personal</small>
+          </button>
+
+          <button type="button" class="progress-step" data-step-indicator="2" aria-label="Step 2: Registration details">
+            <span>2</span>
+            <small>Registration</small>
+          </button>
+
+          <button type="button" class="progress-step" data-step-indicator="3" aria-label="Step 3: Payment">
+            <span>3</span>
+            <small>Payment</small>
+          </button>
+        </div>
+      </div>
+
+      <form id="registrationForm" novalidate enctype="multipart/form-data">
+        <!-- ================= STEP 1 ================= -->
+        <section class="form-step active" data-step="1" aria-labelledby="step1Title">
+          <div class="step-heading">
+            <div>
+              <p class="step-kicker">STEP 1 OF 3</p>
+              <h2 id="step1Title">Let's start with you</h2>
+              <p>Tell us how we can reach you.</p>
+            </div>
+            <span class="step-badge">Personal Info</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="field full">
+              <label for="fullName">Full Name <span>*</span></label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                autocomplete="name"
+                placeholder="e.g. Emmanuel Gbolahan"
+                maxlength="100"
+                required
+              />
+              <small class="field-error" data-error-for="fullName"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                maxlength="120"
+                required
+              />
+              <small class="field-error" data-error-for="email"></small>
+            </div>
+
+            <div class="field">
+              <label for="whatsapp">WhatsApp Number <span>*</span></label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="whatsapp"
+                autocomplete="tel"
+                placeholder="0801 234 5678"
+                maxlength="20"
+                required
+              />
+              <small class="field-error" data-error-for="whatsapp"></small>
+            </div>
+          </div>
+
+          <div class="step-actions single-action">
+            <button type="button" class="btn btn-primary next-btn" data-next="2">
+              Continue
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= STEP 2 ================= -->
+        <section class="form-step" data-step="2" aria-labelledby="step2Title">
+          <div class="step-heading">
+            <div>
+              <p class="step-kicker">STEP 2 OF 3</p>
+              <h2 id="step2Title">Your learning goals</h2>
+              <p>Help us understand what you want to improve.</p>
+            </div>
+            <span class="step-badge">Registration</span>
+          </div>
+
+          <div class="form-grid">
+            <fieldset class="choice-group full">
+              <legend>Which option would you like to register for? <span>*</span></legend>
+              <div class="choice-grid two">
+                <label class="choice-card">
+                  <input type="radio" name="attendance" value="Physical classes" required />
+                  <span class="custom-radio"></span>
+                  <span>
+                    <strong>Physical classes</strong>
+                    <small>Attend the sessions in person.</small>
+                  </span>
+                </label>
+
+                <label class="choice-card">
+                  <input type="radio" name="attendance" value="Virtual classes" required />
+                  <span class="custom-radio"></span>
+                  <span>
+                    <strong>Virtual classes</strong>
+                    <small>Join remotely from anywhere.</small>
+                  </span>
+                </label>
+              </div>
+              <small class="field-error" data-error-group="attendance"></small>
+            </fieldset>
+
+            <fieldset class="choice-group full">
+              <legend>What best describes you? <span>*</span></legend>
+              <div class="choice-grid two">
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Student" required />
+                  <span class="custom-radio"></span>
+                  <span>Student</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Teacher/Educator" required />
+                  <span class="custom-radio"></span>
+                  <span>Teacher/Educator</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Entrepreneur/Business Owner" required />
+                  <span class="custom-radio"></span>
+                  <span>Entrepreneur/Business Owner</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Professional/Employee" required />
+                  <span class="custom-radio"></span>
+                  <span>Professional/Employee</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Content Creator" required />
+                  <span class="custom-radio"></span>
+                  <span>Content Creator</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Job Seeker" required />
+                  <span class="custom-radio"></span>
+                  <span>Job Seeker</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="radio" name="profileType" value="Other" required />
+                  <span class="custom-radio"></span>
+                  <span>Other</span>
+                </label>
+              </div>
+              <small class="field-error" data-error-group="profileType"></small>
+            </fieldset>
+
+            <fieldset class="choice-group full">
+              <legend>What would you most like to improve? <span>*</span> <small>(select all that apply)</small></legend>
+              <div class="choice-grid three checkbox-grid">
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Speaking confidently" />
+                  <span class="custom-check"></span>
+                  <span>Speaking confidently</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Public speaking" />
+                  <span class="custom-check"></span>
+                  <span>Public speaking</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Clear and effective expression" />
+                  <span class="custom-check"></span>
+                  <span>Clear and effective expression</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Overcoming stage fright" />
+                  <span class="custom-check"></span>
+                  <span>Overcoming stage fright</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Voice and tone modulation" />
+                  <span class="custom-check"></span>
+                  <span>Voice and tone modulation</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Body language and gestures" />
+                  <span class="custom-check"></span>
+                  <span>Body language and gestures</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Conversation skills" />
+                  <span class="custom-check"></span>
+                  <span>Conversation skills</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Professional communication" />
+                  <span class="custom-check"></span>
+                  <span>Professional communication</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Persuasion and influence" />
+                  <span class="custom-check"></span>
+                  <span>Persuasion and influence</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Presentation skills" />
+                  <span class="custom-check"></span>
+                  <span>Presentation skills</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Storytelling" />
+                  <span class="custom-check"></span>
+                  <span>Storytelling</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Objection handling" />
+                  <span class="custom-check"></span>
+                  <span>Objection handling</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Vocal delivery" />
+                  <span class="custom-check"></span>
+                  <span>Vocal delivery</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Audience Reading & Adaptability" />
+                  <span class="custom-check"></span>
+                  <span>Audience Reading &amp; Adaptability</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Clarity & Structure" />
+                  <span class="custom-check"></span>
+                  <span>Clarity &amp; Structure</span>
+                </label>
+                <label class="choice-card compact">
+                  <input type="checkbox" name="improvements[]" value="Other" id="improvementOtherCheckbox" />
+                  <span class="custom-check"></span>
+                  <span>Other</span>
+                </label>
+              </div>
+
+              <div class="conditional-field hidden" id="improvementOtherWrap">
+                <label for="improvementOther">Please specify other area</label>
+                <input type="text" id="improvementOther" name="improvementOther" maxlength="150" placeholder="Tell us what you'd like to improve" />
+              </div>
+              <small class="field-error" data-error-group="improvements"></small>
+            </fieldset>
+
+            <div class="field full">
+              <label for="biggestChallenge">What is your biggest challenge when speaking or communicating? <span>*</span></label>
+              <textarea id="biggestChallenge" name="biggestChallenge" rows="4" maxlength="1000" placeholder="Tell us a little about the challenge you currently face..." required></textarea>
+              <small class="field-error" data-error-for="biggestChallenge"></small>
+            </div>
+
+            <fieldset class="choice-group full">
+              <legend>How comfortable are you with speaking in front of people? <span>*</span></legend>
+              <div class="choice-grid two">
+                <label class="choice-card compact"><input type="radio" name="comfortLevel" value="Very comfortable" required /><span class="custom-radio"></span><span>Very comfortable</span></label>
+                <label class="choice-card compact"><input type="radio" name="comfortLevel" value="Somewhat comfortable" required /><span class="custom-radio"></span><span>Somewhat comfortable</span></label>
+                <label class="choice-card compact"><input type="radio" name="comfortLevel" value="Neutral" required /><span class="custom-radio"></span><span>Neutral</span></label>
+                <label class="choice-card compact"><input type="radio" name="comfortLevel" value="Somewhat uncomfortable" required /><span class="custom-radio"></span><span>Somewhat uncomfortable</span></label>
+                <label class="choice-card compact"><input type="radio" name="comfortLevel" value="Very uncomfortable" required /><span class="custom-radio"></span><span>Very uncomfortable</span></label>
+              </div>
+              <small class="field-error" data-error-group="comfortLevel"></small>
+            </fieldset>
+
+            <fieldset class="choice-group full">
+              <legend>Have you received any formal training in public speaking or communication before? <span>*</span></legend>
+              <div class="choice-grid two">
+                <label class="choice-card compact"><input type="radio" name="formalTraining" value="Yes" required /><span class="custom-radio"></span><span>Yes</span></label>
+                <label class="choice-card compact"><input type="radio" name="formalTraining" value="No" required /><span class="custom-radio"></span><span>No</span></label>
+              </div>
+              <small class="field-error" data-error-group="formalTraining"></small>
+            </fieldset>
+
+            <div class="field full">
+              <label for="expectedOutcome">What do you hope to achieve by the end of these five Saturdays? <span>*</span></label>
+              <textarea id="expectedOutcome" name="expectedOutcome" rows="4" maxlength="1000" placeholder="For example: speak more confidently at work, improve presentations, etc." required></textarea>
+              <small class="field-error" data-error-for="expectedOutcome"></small>
+            </div>
+
+            <fieldset class="choice-group full">
+              <legend>How did you hear about the classes? <span>*</span></legend>
+              <div class="choice-grid three">
+                <label class="choice-card compact"><input type="radio" name="source" value="WhatsApp" required /><span class="custom-radio"></span><span>WhatsApp</span></label>
+                <label class="choice-card compact"><input type="radio" name="source" value="Instagram" required /><span class="custom-radio"></span><span>Instagram</span></label>
+                <label class="choice-card compact"><input type="radio" name="source" value="Facebook" required /><span class="custom-radio"></span><span>Facebook</span></label>
+                <label class="choice-card compact"><input type="radio" name="source" value="X/Twitter" required /><span class="custom-radio"></span><span>X/Twitter</span></label>
+                <label class="choice-card compact"><input type="radio" name="source" value="Referral/Friend" required /><span class="custom-radio"></span><span>Referral/Friend</span></label>
+                <label class="choice-card compact"><input type="radio" name="source" value="Other" required /><span class="custom-radio"></span><span>Other</span></label>
+              </div>
+              <small class="field-error" data-error-group="source"></small>
+            </fieldset>
+
+            <div class="field full">
+              <label for="additionalInfo">Do you have any questions or additional information you'd like us to know? <em>Optional</em></label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="4" maxlength="1000" placeholder="Optional"></textarea>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-secondary back-btn" data-back="1">
+              <span aria-hidden="true">←</span>
+              Back
+            </button>
+
+            <button type="button" class="btn btn-primary next-btn" data-next="3">
+              Continue to payment
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= STEP 3 ================= -->
+        <section class="form-step" data-step="3" aria-labelledby="step3Title">
+          <div class="step-heading">
+            <div>
+              <p class="step-kicker">STEP 3 OF 3</p>
+              <h2 id="step3Title">Payment &amp; receipt</h2>
+              <p>Make your transfer, then upload the receipt so we can review it.</p>
+            </div>
+            <span class="step-badge">Payment</span>
+          </div>
+
+          <div class="payment-layout">
+            <div class="payment-card">
+              <div class="payment-card-top">
+                <div>
+                  <p class="mini-label">EARLY BIRD PROGRAM FEE</p>
+                  <h3 id="displayAmount">₦25,000</h3>
+                  <p style="margin:.25rem 0 0; font-size:.9rem; opacity:.8;">Regular fee: <s>₦50,000</s> &nbsp; • &nbsp; Early Bird: 50% OFF</p>
+                </div>
+                <span class="payment-status-pill">Manual review</span>
+              </div>
+
+              <div class="account-box">
+                <div class="account-row">
+                  <span>Payment method</span>
+                  <strong>Moniepoint MFB</strong>
+                </div>
+                <div class="account-row">
+                  <span>Account number</span>
+                  <strong>3003202209</strong>
+                </div>
+                <div class="account-row">
+                  <span>Account name</span>
+                  <strong>Abisola Stella Akintomide</strong>
+                </div>
+              </div>
+
+              <div class="payment-note">
+                <span class="note-icon">i</span>
+                <p>
+                  The regular course fee is ₦50,000. The Early Bird offer gives you 50% OFF, so please transfer ₦25,000. Your payment
+                  will be reviewed manually before final confirmation.
+                </p>
+              </div>
+            </div>
+
+            <div class="upload-card">
+              <div class="upload-icon" aria-hidden="true">↑</div>
+              <div>
+                <h3>Upload your payment receipt</h3>
+                <p>Accepted: JPG, PNG or PDF. Maximum size: 4 MB.</p>
+              </div>
+
+              <label class="file-dropzone" for="receipt">
+                <input type="file" id="receipt" name="receipt" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" required />
+                <span class="file-dropzone-main">Choose receipt</span>
+                <span class="file-dropzone-sub">Tap to browse your device</span>
+              </label>
+
+              <div id="filePreview" class="file-preview hidden">
+                <div>
+                  <strong id="fileName">No file selected</strong>
+                  <small id="fileSize"></small>
+                </div>
+                <button type="button" id="removeFile" class="remove-file" aria-label="Remove selected receipt">×</button>
+              </div>
+
+              <small class="field-error" data-error-for="receipt"></small>
+            </div>
+          </div>
+
+          <div class="form-grid payment-fields">
+            <div class="field">
+              <label for="paymentReference">Transfer / Payment Reference <span>*</span></label>
+              <input type="text" id="paymentReference" name="paymentReference" maxlength="100" placeholder="e.g. PMT123456789" required />
+              <small class="field-help">Use the reference shown on your transfer receipt, if available.</small>
+              <small class="field-error" data-error-for="paymentReference"></small>
+            </div>
+
+            <div class="field">
+              <label for="paymentDate">Date of Payment <span>*</span></label>
+              <input type="date" id="paymentDate" name="paymentDate" required />
+              <small class="field-error" data-error-for="paymentDate"></small>
+            </div>
+
+            <div class="field full">
+              <label for="paymentNote">Payment note <em>Optional</em></label>
+              <textarea id="paymentNote" name="paymentNote" rows="3" maxlength="500" placeholder="Optional note about your payment"></textarea>
+            </div>
+          </div>
+
+          <div class="review-box">
+            <div>
+              <span class="review-icon">✓</span>
+              <div>
+                <strong>Almost there</strong>
+                <p>By submitting, you confirm that the information provided is correct and that you have made or are about to make the required payment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="submitStatus" class="submit-status" role="alert" aria-live="polite"></div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-secondary back-btn" data-back="2">
+              <span aria-hidden="true">←</span>
+              Back
+            </button>
+
+            <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+              <span class="btn-text">Submit Registration</span>
+              <span class="btn-spinner hidden" aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+      </form>
+
+      <!-- ================= SUCCESS ================= -->
+      <section class="success-screen" id="successScreen" aria-labelledby="successTitle" aria-live="polite">
+        <div class="success-orbit orbit-one"></div>
+        <div class="success-orbit orbit-two"></div>
+
+        <div class="success-check-wrap">
+          <div class="success-check">✓</div>
+        </div>
+
+        <p class="eyebrow">REGISTRATION RECEIVED</p>
+        <h2 id="successTitle">Congratulations, <span id="successName">there</span>! 🎉</h2>
+        <p class="success-message">
+          Thank you for signing up for the Effective Communication &amp; Public Speaking program.
+          We've received your registration and payment receipt.
+          We'll review your payment and get back to you shortly.
+        </p>
+
+        <p class="success-note">
+          Please keep your payment receipt until our team confirms your registration.
+        </p>
+      </section>
+    </section>
+
+    <footer class="page-footer">
+      <span>Star Language Arts Ltd</span>
+      <span>•</span>
+      <span>Effective Communication &amp; Public Speaking</span>
+    </footer>
+  </main>
+
+  <script src="JS/form.js"></script>
+</body>
+</html>
